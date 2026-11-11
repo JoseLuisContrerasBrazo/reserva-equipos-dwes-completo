@@ -1,0 +1,3 @@
+<%- include('../partials/header', { titulo }) %>
+<a class="back-link" href="/equipos">← Volver al catálogo</a><section class="detail-card"><div class="detail-icon">▣</div><div><p class="eyebrow"><%= equipo.codigo %></p><h1><%= equipo.nombre %></h1><p><%= equipo.tipo === 'portatil' ? 'Portátil' : 'Sobremesa' %></p><span class="status status-<%= equipo.estado === 'operativo' ? 'ok' : 'off' %>"><%= equipo.estado === 'operativo' ? 'Operativo' : 'Fuera de servicio' %></span><p class="detail-copy">La disponibilidad se comprueba para cada fecha y turno al iniciar una reserva.</p><a class="button" href="/reservas/nueva">Reservar un turno</a></div></section>
+<%- include('../partials/footer') %>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title><%= titulo %> | Reserva de equipos</title>
+  <link rel="stylesheet" href="/estilos.css">
+</head>
+<body>
+<header class="site-header"><a class="brand" href="/">Reserva<span>Equipos</span></a>
+<nav aria-label="Navegación principal">
+  <a href="/equipos">Equipos</a>
+  <% if (usuario) { %><a href="/reservas/nueva">Reservar</a><a href="/mis-reservas">Mis reservas</a><a href="/perfil">Perfil</a>
+    <% if (usuario.rol === 'admin') { %><a href="/admin/equipos">Administración</a><a href="/admin/reservas">Todas las reservas</a><% } %>
+    <form class="inline-form" method="post" action="/logout"><input type="hidden" name="_csrf" value="<%= csrfToken %>"><button class="link-button" type="submit">Cerrar sesión</button></form>
+  <% } else { %><a href="/login">Iniciar sesión</a><a class="nav-cta" href="/registro">Crear cuenta</a><% } %>
+</nav></header>
+<main class="container">
+<% if (aviso) { %><div class="notice notice-<%= aviso.tipo %>" role="status"><%= aviso.texto %></div><% } %>

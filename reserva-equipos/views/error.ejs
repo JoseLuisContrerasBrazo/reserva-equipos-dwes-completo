@@ -1,0 +1,3 @@
+<%- include('partials/header', { titulo }) %>
+<section class="error-page"><div class="error-code"><%= typeof status === 'number' ? status : '!' %></div><p class="eyebrow">NO SE HA PODIDO COMPLETAR</p><h1><%= titulo %></h1><p><%= mensaje %></p><a class="button" href="/">Volver al inicio</a></section>
+<%- include('partials/footer') %>

@@ -251,5 +251,5 @@ curl -i -b cookies.txt http://localhost:3000/perfil
 | POST | `/admin/reservas/:id/cancelar` | Admin + CSRF |
 
 
-**ENLACE IA :** ``
+**ENLACE IA :** `https://chatgpt.com/share/6af481e2-e3e4-83ed-aa02-4e712c1dfbe5`
 
